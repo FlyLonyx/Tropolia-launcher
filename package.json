@@ -1,0 +1,106 @@
+{
+    "name": "Tropolia-Launcher",
+    "preductname": "Tropolia Launcher",
+    "version": "1.0.14",
+    "description": "",
+    "main": "src/app.js",
+    "author": "Luuxis, FlyLonyx",
+    "url": "https://tropolia.fr/luncher",
+    "engines": {
+        "node": "16.x.x"
+    },
+    "scripts": {
+        "start": "cross-env-shell NODE_ENV=dev electron .",
+        "dev": "nodemon --exec npm start",
+        "dist": "electron-builder",
+        "dist:linux": "electron-builder --linux",
+        "dist:mac": "electron-builder --mac",
+        "dist:all": "electron-builder -mwl"
+    },
+    "license": "CC0",
+    "nodemonConfig": {
+        "ext": "js,html,css"
+    },
+    "dependencies": {
+        "discord-rpc": "^4.0.1",
+        "electron-updater": "^6.1.4",
+        "emc-core": "^1.2.2",
+        "node-fetch": "^2.6.7",
+        "tropolia_core": "^2.0.1"
+    },
+    "build": {
+        "appId": "fr.flylonyx.tropolialauncher",
+        "productName": "Tropolia-Launcher",
+        "artifactName": "${productName}-${os}-${arch}.${ext}",
+        "files": [
+            "src/**/*",
+            "package.json",
+            "LICENSE.md"
+        ],
+        "compression": "maximum",
+        "asar": true,
+        "win": {
+            "icon": "./src/assets/images/icon.ico",
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ]
+        },
+        "nsis": {
+            "oneClick": true,
+            "allowToChangeInstallationDirectory": false,
+            "createDesktopShortcut": true,
+            "perMachine": true,
+            "allowElevation": true,
+            "runAfterFinish": true
+        },
+        "mac": {
+            "icon": "./src/assets/images/icon.icns",
+            "category": "public.app-category.games",
+            "target": [
+                {
+                    "target": "dmg",
+                    "arch": [
+                        "x64",
+                        "arm64"
+                    ]
+                }
+            ]
+        },
+        "linux": {
+            "icon": "./src/assets/images/icon.png",
+            "target": [
+                {
+                    "target": "AppImage",
+                    "arch": [
+                        "x64"
+                    ]
+                },
+                {
+                    "target": "tar.gz",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ]
+        },
+        "directories": {
+            "output": "dist"
+        }
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.3",
+        "electron": "^19.0.9",
+        "electron-builder": "^23.6.0",
+        "nodemon": "^2.0.19"
+    },
+    "repository": "https://github.com/FlyLonyx/Tropolia-launcher",
+    "publish": {
+        "provider": "github",
+        "releaseType": "release"
+    }
+}
