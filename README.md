@@ -1,7 +1,7 @@
 # 🚀 Tropolia Launcher
 
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
-![Version](https://img.shields.io/badge/Version-1.0.14-orange)
+![Version](https://img.shields.io/badge/Version-1.0.15-orange)
 
 **Tropolia launcher** is a Minecraft launcher used to connect to the Tropolia server and start the game to connect to the server.
 
