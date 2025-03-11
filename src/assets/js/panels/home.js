@@ -100,7 +100,7 @@ class Home {
             }
             
             let opts = {
-                url: this.config.game_url === "" || this.config.game_url === undefined ? `${urlpkg}/file` : this.config.game_url,
+                url: this.config.game_url === "" || this.config.game_url === undefined ? `${urlpkg}/filess` : this.config.game_url,
                 authenticator: account,
                 timeout: 10000,
                 path: `${dataDirectory}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}`,

@@ -1,7 +1,7 @@
 {
     "name": "Tropolia-Launcher",
     "preductname": "Tropolia Launcher",
-    "version": "1.0.14",
+    "version": "1.0.15",
     "description": "",
     "main": "src/app.js",
     "author": "Luuxis, FlyLonyx",
