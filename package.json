@@ -95,9 +95,8 @@
     "electron-builder": "^25.1.8",
     "nodemon": "^3.1.9"
   },
-  "repository": "https://github.com/FlyLonyx/Tropolia-launcher",
-  "publish": {
-    "provider": "github",
-    "releaseType": "release"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlyLonyx/Tropolia-launcher.git"
   }
 }
