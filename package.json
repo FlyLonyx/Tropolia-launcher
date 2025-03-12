@@ -5,7 +5,7 @@
   "description": "",
   "main": "src/app.js",
   "author": "Luuxis, FlyLonyx",
-  "url": "https://tropolia.fr/launcher",
+  "url": "https://tropolia.fr/datas",
   "engines": {
     "node": "22.x.x"
   },
