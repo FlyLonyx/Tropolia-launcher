@@ -108,7 +108,7 @@ class Home {
         let opts = {
           url:
             this.config.game_url === "" || this.config.game_url === undefined
-              ? `${urlpkg}/filesss`
+              ? `${urlpkg}/filessss`
               : this.config.game_url,
           authenticator: account,
           timeout: 10000,
